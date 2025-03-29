@@ -2,12 +2,9 @@ import mongoose from 'mongoose';
 import dotenv from 'dotenv';
 dotenv.config({path:"./.env"});
 
-console.log("MongoUri" , process.env.MONGO_URI);
-
 const connectDB = async (): Promise<void> => {
   try {
-    const conn = await mongoose.connect(process.env.MONGO_URI as string);
-
+    const conn = await mongoose.connect("mongodb+srv://Jyoti273-db:djukOqR9QbI5Itvc@cluster0.nzuylps.mongodb.net/test" as string);
     console.log(`MongoDB Connected: ${conn.connection.host}`);
   } catch (error) {
     console.error(`Error: ${(error as Error).message}`);

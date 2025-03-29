@@ -4,21 +4,33 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "build": "tsc && node -e \"require('fs').chmodSync('build/index.js', '755')\""
+    "build": "tsc && node -e \"require('fs').chmodSync('build/index.js', '755')\"",
+    "dev": "node --loader ts-node/esm src/index.ts",
+    "start": "node build/index.js",
+    "clean": "rm -rf build"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "description": "",
   "dependencies": {
+    "@apollo/datasource-rest": "^6.4.1",
+    "@apollo/server": "^4.11.3",
     "@modelcontextprotocol/sdk": "^1.6.1",
     "@types/mongoose": "^5.11.96",
+    "csv-parser": "^3.2.0",
     "dotenv": "^16.4.7",
+    "express": "^5.0.1",
+    "facebook-nodejs-business-sdk": "^22.0.0",
+    "graphql-request": "^7.1.2",
     "mongoose": "^8.12.1",
     "zod": "^3.24.2"
   },
   "devDependencies": {
+    "@types/express": "^5.0.1",
+    "@types/facebook-nodejs-business-sdk": "^20.0.2",
     "@types/node": "^22.13.9",
+    "ts-node": "^10.9.2",
     "typescript": "^5.8.2"
   }
 }
