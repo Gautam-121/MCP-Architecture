@@ -1228,6 +1228,10 @@ app.post("/messages", async (req: Request, res: Response) => {
   }
 });
 
+app.get("/", (req: Request, res: Response) => {
+  res.send("Hello from E-commerce API");
+})
+
 connectDB()
   .then(() => {
     const PORT = process.env.PORT
