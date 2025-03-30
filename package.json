@@ -6,7 +6,7 @@
   "scripts": {
     "build": "tsc && node -e \"require('fs').chmodSync('build/index.js', '755')\"",
     "dev": "node --loader ts-node/esm src/index.ts",
-    "start": "node build/index.js",
+    "start": "node --loader ts-node/esm src/index.ts",
     "clean": "rm -rf build"
   },
   "keywords": [],
