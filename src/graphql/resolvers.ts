@@ -1,4 +1,4 @@
-import { ProductAPI } from '../server/ProductApi.js';
+import { ProductAPI } from "../server/ProductApi.js";
 
 interface Product {
   _id: string;
